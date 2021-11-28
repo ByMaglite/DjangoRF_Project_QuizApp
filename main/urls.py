@@ -18,7 +18,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('quiz/', include('quizapp.urls')),
-    # path('api-auth/', include('rest_framework.urls')), 
-    path('user/', include('users.urls')),
+    path('nested_admin/', include('nested_admin.urls')),
+    path('auth/', include('dj_rest_auth.urls')),
+    path("quiz/", include("quizapp.urls")),
+    path("user/", include("users.urls"))
 ]
